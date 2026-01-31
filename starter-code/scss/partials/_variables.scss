@@ -1,0 +1,66 @@
+@use "./utils" as *;
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --clr-primary: #345ff6;
+
+  --clr-tint-1: #b3d3f1;
+  --clr-tint-2: #e1e7fe;
+
+  --clr-shade-1: #253347;
+
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --clr-grey-1: #acc1de;
+  --clr-grey-2: #5e6e85;
+
+  --clr-gradient: linear-gradient(#d6fcfe, #d6e6fe);
+
+  --ff-main: "Inter";
+
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --lh-1: 1.1;
+  --lh-2: 1.2;
+  --lh-3: 1.5;
+
+  // FONT SIZE
+  --fs-1: #{toRem(14px)};
+  --fs-2: #{toRem(16px)};
+  --fs-3: #{toRem(20px)};
+  --fs-4: #{toRem(24px)};
+  --fs-5: #{toRem(32px)};
+
+  // SPACING
+  --sp-1: #{toRem(8px)};
+  --sp-2: #{toRem(16px)};
+  --sp-3: #{toRem(24px)};
+  --sp-4: #{toRem(32px)};
+  --sp-5: #{toRem(40px)};
+  --sp-6: #{toRem(48px)};
+  --sp-7: #{toRem(56px)};
+  --sp-8: #{toRem(72px)};
+  --sp-9: #{toRem(88px)};
+  --sp-10: #{toRem(96px)};
+  --sp-11: #{toRem(104px)};
+  --sp-12: #{toRem(128px)};
+  --sp-13: #{toRem(144px)};
+
+  --container-width-1: #{toRem(1440px)};
+  --container-width-2: #{toRem(1160px)};
+
+  // breakpoints
+  --bp-tablet: #{toRem(375px)};
+  --bp-desktop: #{toRem(768px)};
+}

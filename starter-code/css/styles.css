@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --clr-primary: #345ff6;
+  --clr-tint-1: #b3d3f1;
+  --clr-tint-2: #e1e7fe;
+  --clr-shade-1: #253347;
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-grey-1: #acc1de;
+  --clr-grey-2: #5e6e85;
+  --clr-gradient: linear-gradient(#d6fcfe, #d6e6fe);
+  --ff-main: "Inter";
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --lh-1: 1.1;
+  --lh-2: 1.2;
+  --lh-3: 1.5;
+  --fs-1: 0.875rem;
+  --fs-2: 1rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.5rem;
+  --fs-5: 2rem;
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 2.5rem;
+  --sp-6: 3rem;
+  --sp-7: 3.5rem;
+  --sp-8: 4.5rem;
+  --sp-9: 5.5rem;
+  --sp-10: 6rem;
+  --sp-11: 6.5rem;
+  --sp-12: 8rem;
+  --sp-13: 9rem;
+  --container-width-1: 90rem;
+  --container-width-2: 72.5rem;
+  --bp-tablet: 23.4375rem;
+  --bp-desktop: 48rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--ff-main), sans-serif;
+  font-size: var(--fs-1);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-3);
+}
+
+/*# sourceMappingURL=styles.css.map */
