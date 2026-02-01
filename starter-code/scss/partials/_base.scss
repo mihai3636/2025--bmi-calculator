@@ -3,7 +3,61 @@
 
 body {
   font-family: var(--ff-main), sans-serif;
-  font-size: var(--fs-1);
+  font-size: var(--fs-2);
   font-weight: var(--fw-normal);
   line-height: var(--lh-3);
+  color: var(--clr-grey-2);
+}
+
+/******************* LAYOUT   ***************************/
+
+.container {
+  max-width: var(--container-width-2);
+  margin-inline: auto;
+  // background-color: pink;
+}
+
+.page {
+  max-width: var(--container-width-1);
+  margin-inline: auto;
+  // background-color: red;
+}
+
+.section {
+  padding-inline: var(--sp-3);
+}
+
+.content-flow > * + * {
+  --spacer: var(--sp-3);
+  @media (min-width: $bp-desktop) {
+    --spacer: var(--sp-4);
+  }
+
+  margin-block-start: var(--spacer, var(--sp-2));
+}
+
+/******************* TYPOGRAPHY   ***************************/
+
+h1,
+h2,
+h3 {
+  color: var(--clr-shade-1);
+  font-weight: var(--fw-semi-bold);
+}
+
+.title-page {
+  font-size: var(--fs-6);
+  line-height: var(--lh-1);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-7);
+  }
+}
+
+.title-section {
+  font-size: var(--fs-5);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-6);
+  }
 }

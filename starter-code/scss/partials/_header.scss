@@ -1,0 +1,52 @@
+@use "utils" as *;
+@use "variables" as *;
+
+header.section {
+  padding-block: var(--sp-6);
+  @media (min-width: $bp-desktop) {
+    padding-block: var(--sp-9);
+  }
+
+  // background: var(--clr-gradient);
+  background-color: pink;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-info {
+  padding-block: var(--sp-4);
+  text-align: center;
+}
+
+.calculator {
+  background-color: var(--clr-white);
+  padding: var(--sp-3);
+  border-radius: var(--br);
+
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+
+  & > *:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  h2 {
+    font-size: var(--fs-4);
+    text-align: center;
+  }
+
+  .input-group--secondary {
+    // display: none;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+}

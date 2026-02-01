@@ -9,6 +9,9 @@
   font-display: swap;
 }
 
+$bp-desktop: #{toRem(768px)};
+$bp-tablet: #{toRem(375px)};
+
 :root {
   --clr-primary: #345ff6;
 
@@ -23,7 +26,13 @@
   --clr-grey-1: #acc1de;
   --clr-grey-2: #5e6e85;
 
-  --clr-gradient: linear-gradient(#d6fcfe, #d6e6fe);
+  --clr-gradient-start: rgb(214, 252, 254, 0.1);
+  --clr-gradient-end: rgb(214, 230, 254);
+  --clr-gradient: linear-gradient(
+    to right,
+    var(--clr-gradient-start),
+    var(--clr-gradient-end)
+  );
 
   --ff-main: "Inter";
 
@@ -41,6 +50,8 @@
   --fs-3: #{toRem(20px)};
   --fs-4: #{toRem(24px)};
   --fs-5: #{toRem(32px)};
+  --fs-6: #{toRem(48px)};
+  --fs-7: #{toRem(64px)};
 
   // SPACING
   --sp-1: #{toRem(8px)};
@@ -60,7 +71,5 @@
   --container-width-1: #{toRem(1440px)};
   --container-width-2: #{toRem(1160px)};
 
-  // breakpoints
-  --bp-tablet: #{toRem(375px)};
-  --bp-desktop: #{toRem(768px)};
+  --br: #{toRem(15px)};
 }
