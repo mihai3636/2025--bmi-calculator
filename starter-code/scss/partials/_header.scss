@@ -28,7 +28,9 @@ header .container {
   border-radius: var(--br);
 
   display: grid;
-  gap: var(--sp-2);
+  row-gap: var(--sp-3);
+  column-gap: var(--sp-2);
+
   grid-template-columns: 1fr 1fr;
   align-items: end;
 
@@ -73,7 +75,7 @@ header .container {
 
   .radio-custom:has(input[type="radio"]:checked) {
     background-color: var(--clr-grey-1);
-    border: none;
+    border-color: transparent;
   }
 
   .checkmark {
@@ -100,6 +102,45 @@ header .container {
   border: 1px solid var(--clr-primary);
 }
 
-input[type="text"] {
-  width: 100%;
+.input-group {
+  --spacer: var(--sp-1);
+
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .input-wrapper {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-shade-1);
+
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+
+    border: 1px solid var(--clr-grey-2);
+    border-radius: 12px;
+    padding: var(--sp-3);
+    cursor: pointer;
+  }
+
+  .input-wrapper:hover {
+    border-color: var(--clr-primary);
+  }
+  .input-wrapper:focus-within {
+    border-color: var(--clr-primary);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    border: none;
+  }
+  input[type="text"]:focus {
+    outline: none;
+  }
+
+  span {
+    color: var(--clr-primary);
+  }
 }

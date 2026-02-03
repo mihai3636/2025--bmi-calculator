@@ -27,12 +27,14 @@ body {
   padding-inline: var(--sp-3);
 }
 
-.content-flow > * + * {
+.content-flow {
   --spacer: var(--sp-3);
   @media (min-width: $bp-desktop) {
     --spacer: var(--sp-4);
   }
+}
 
+.content-flow > * + * {
   margin-block-start: var(--spacer, var(--sp-2));
 }
 
