@@ -31,18 +31,29 @@
           <div class="calculator">
             <h2>Enter your details below</h2>
             <!-- Metric radio picker -->
-            <label class="radio-unit" for="radioMetric">
-              <input id="radioMetric" type="radio" name="unit" value="metric" />
+            <label class="radio-group" for="radioMetric">
+              <div class="radio-custom">
+                <input
+                  id="radioMetric"
+                  type="radio"
+                  name="unit"
+                  value="metric"
+                />
+                <div class="checkmark"></div>
+              </div>
               <span>Metric</span>
             </label>
 
-            <label class="radio-unit" for="radioImperial">
-              <input
-                id="radioImperial"
-                type="radio"
-                name="unit"
-                value="imperial"
-              />
+            <label class="radio-group" for="radioImperial">
+              <div class="radio-custom">
+                <input
+                  id="radioImperial"
+                  type="radio"
+                  name="unit"
+                  value="imperial"
+                />
+                <div class="checkmark"></div>
+              </div>
               <span>Imperial</span>
             </label>
 
