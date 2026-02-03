@@ -34,14 +34,19 @@ header .container {
   grid-template-columns: 1fr 1fr;
   align-items: end;
 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
   & > *:first-child {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
+  & > *:last-child {
+    grid-column: 1 / -1;
+  }
+
   h2 {
     font-size: var(--fs-4);
-    text-align: center;
   }
 
   .input-group--secondary {
@@ -143,4 +148,54 @@ header .container {
   span {
     color: var(--clr-primary);
   }
+}
+
+.result > * + * {
+  margin-block-start: var(--sp-3);
+}
+
+.result {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+
+  border-radius: 16px;
+  padding: var(--sp-4);
+}
+
+.result--welcome {
+  .result-title {
+    display: none;
+  }
+  .result-value {
+    display: none;
+  }
+  .result-welcome {
+    display: block;
+  }
+}
+
+.result-header > * + p {
+  --spacer: var(--sp-1);
+  margin-block-start: var(--spacer);
+}
+
+.result-welcome {
+  display: none;
+  font-size: var(--fs-4);
+  color: var(--clr-white);
+}
+
+.result-title {
+  color: var(--clr-white);
+  font-size: var(--fs-2);
+}
+
+.result-value {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.1;
+}
+
+.result-info {
+  font-size: var(--fs-1);
 }
