@@ -10,7 +10,9 @@
 }
 
 $bp-desktop: #{toRem(768px)};
-$bp-tablet: #{toRem(375px)};
+// TODO: 375 is to small to consider tablet starting from here
+// look at the calculator info border radius for tablet for example.
+$bp-tablet: #{toRem(475px)};
 
 :root {
   --clr-primary: #345ff6;
@@ -32,6 +34,14 @@ $bp-tablet: #{toRem(375px)};
     to right,
     var(--clr-gradient-start),
     var(--clr-gradient-end)
+  );
+
+  --clr-gradient-light-start: rgb(214, 252, 254, 0.15);
+  --clr-gradient-light-end: rgb(214, 230, 254, 0.15);
+  --clr-gradient-light: linear-gradient(
+    to right,
+    var(--clr-gradient-light-start),
+    var(--clr-gradient-light-end)
   );
 
   --ff-main: "Inter";

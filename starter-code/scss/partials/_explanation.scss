@@ -1,0 +1,11 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.explanation {
+  display: grid;
+  row-gap: var(--sp-5);
+}
+
+.explanation > *:nth-child(2) {
+  --spacer: var(--sp-4);
+}

@@ -2,13 +2,8 @@
 @use "variables" as *;
 
 header.section {
-  padding-block: var(--sp-6);
-  @media (min-width: $bp-desktop) {
-    padding-block: var(--sp-9);
-  }
-
-  // background: var(--clr-gradient);
-  background-color: pink;
+  background: var(--clr-gradient);
+  // background-color: pink;
 }
 
 header .container {
@@ -160,6 +155,12 @@ header .container {
 
   border-radius: 16px;
   padding: var(--sp-4);
+
+  @media (min-width: $bp-tablet) {
+    --br: 100px;
+    border-end-end-radius: var(--br);
+    border-start-end-radius: var(--br);
+  }
 }
 
 .result--welcome {

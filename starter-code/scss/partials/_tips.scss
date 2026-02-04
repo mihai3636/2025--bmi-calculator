@@ -1,0 +1,23 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.tips {
+  background: var(--clr-gradient-light);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--sp-5);
+  }
+}
+
+.article {
+  display: grid;
+  row-gap: var(--sp-4);
+
+  h2 {
+    font-size: var(--fs-4);
+    line-height: var(--lh-2);
+  }
+}
