@@ -2,8 +2,19 @@
 @use "variables" as *;
 
 header.section {
-  background: var(--clr-gradient);
-  // background-color: pink;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    bottom: 40%;
+    border-radius: 0 0 var(--br-2) var(--br-2);
+
+    background: var(--clr-gradient);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+    z-index: -1;
+  }
 }
 
 header .container {
