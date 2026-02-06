@@ -29,6 +29,10 @@ body {
   @media (min-width: $bp-desktop) {
     padding-block: var(--sp-9);
   }
+
+  &.spacer-xl {
+    padding-block: var(--sp-8);
+  }
 }
 
 .content-flow {

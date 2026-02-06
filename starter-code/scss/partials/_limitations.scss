@@ -1,0 +1,40 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.limitations {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: var(--sp-2);
+  }
+
+  .container > * {
+    grid-column: 1 / -1;
+  }
+}
+
+.description {
+  --spacer: var(--sp-4);
+
+  text-align: center;
+  padding-block-end: var(--sp-7);
+}
+
+.card {
+  --spacer: var(--sp-2);
+  padding: var(--sp-3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: var(--br);
+  background-color: white;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+
+  h3 {
+    font-size: var(--fs-3);
+    line-height: 1;
+  }
+}
