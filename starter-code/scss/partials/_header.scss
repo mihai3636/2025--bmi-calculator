@@ -5,11 +5,19 @@ header.section {
   position: relative;
 
   &:before {
+    --br: #{toRem(30px)};
+    --distance-to-bottom: 45%;
+
+    @media (min-width: $bp-tablet) {
+      --br: 0px;
+      --distance-to-bottom: 40%;
+    }
+
     content: "";
     position: absolute;
     inset: 0;
-    bottom: 40%;
-    border-radius: 0 0 var(--br-2) var(--br-2);
+    bottom: var(--distance-to-bottom);
+    border-radius: 0 0 var(--br) var(--br);
 
     background: var(--clr-gradient);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
@@ -26,6 +34,10 @@ header .container {
 .header-info {
   padding-block: var(--sp-4);
   text-align: center;
+
+  @media (min-width: $bp-tablet) {
+    padding-block: var(--sp-5);
+  }
 }
 
 .calculator {
@@ -57,6 +69,12 @@ header .container {
 
   .input-group--secondary {
     // display: none;
+  }
+
+  @media (min-width: $bp-tablet) {
+    padding: var(--sp-4);
+    row-gap: var(--sp-4);
+    column-gap: var(--sp-3);
   }
 }
 .radio-group {
@@ -156,10 +174,6 @@ header .container {
   }
 }
 
-.result > * + * {
-  margin-block-start: var(--sp-3);
-}
-
 .result {
   background-color: var(--clr-primary);
   color: var(--clr-white);
@@ -206,6 +220,10 @@ header .container {
   font-size: var(--fs-6);
   font-weight: var(--fw-semi-bold);
   line-height: 1.1;
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-7);
+  }
 }
 
 .result-info {

@@ -9,10 +9,10 @@
   font-display: swap;
 }
 
-$bp-desktop: #{toRem(768px)};
+$bp-desktop: #{toRem(1100px)};
 // TODO: 375 is to small to consider tablet starting from here
 // look at the calculator info border radius for tablet for example.
-$bp-tablet: #{toRem(475px)};
+$bp-tablet: #{toRem(768px)};
 
 :root {
   --clr-primary: #345ff6;
