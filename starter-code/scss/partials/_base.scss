@@ -36,6 +36,11 @@ body {
   &.spacer-xl {
     padding-block: var(--sp-8);
   }
+  &.extra-margin {
+    @media (min-width: $bp-tablet) {
+      margin-block-start: var(--sp-6);
+    }
+  }
 }
 
 .content-flow {

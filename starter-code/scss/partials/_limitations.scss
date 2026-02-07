@@ -11,13 +11,32 @@
   .container > * {
     grid-column: 1 / -1;
   }
+
+  @media (min-width: $bp-tablet) {
+    .container {
+      column-gap: var(--sp-2);
+      row-gap: var(--sp-3);
+
+      .card {
+        grid-column: span 6;
+      }
+
+      .card:last-of-type {
+        grid-column: 4 / 10;
+      }
+    }
+  }
 }
 
 .description {
   --spacer: var(--sp-4);
 
   text-align: center;
-  padding-block-end: var(--sp-7);
+  padding-block-end: var(--sp-5);
+
+  @media (min-width: $bp-tablet) {
+    padding-block-end: var(--sp-4);
+  }
 }
 
 .card {

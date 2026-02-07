@@ -126,6 +126,11 @@ body {
 .section.spacer-xl {
   padding-block: var(--sp-8);
 }
+@media (min-width: 48rem) {
+  .section.extra-margin {
+    margin-block-start: var(--sp-6);
+  }
+}
 
 .content-flow {
   --spacer: var(--sp-3);
@@ -435,6 +440,13 @@ header .container {
   font-size: var(--fs-4);
   line-height: var(--lh-2);
 }
+@media (min-width: 48rem) {
+  .article {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--sp-5);
+  }
+}
 
 .limitations .container {
   display: grid;
@@ -444,11 +456,28 @@ header .container {
 .limitations .container > * {
   grid-column: 1/-1;
 }
+@media (min-width: 48rem) {
+  .limitations .container {
+    column-gap: var(--sp-2);
+    row-gap: var(--sp-3);
+  }
+  .limitations .container .card {
+    grid-column: span 6;
+  }
+  .limitations .container .card:last-of-type {
+    grid-column: 4/10;
+  }
+}
 
 .description {
   --spacer: var(--sp-4);
   text-align: center;
-  padding-block-end: var(--sp-7);
+  padding-block-end: var(--sp-5);
+}
+@media (min-width: 48rem) {
+  .description {
+    padding-block-end: var(--sp-4);
+  }
 }
 
 .card {

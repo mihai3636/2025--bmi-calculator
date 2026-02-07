@@ -20,4 +20,10 @@
     font-size: var(--fs-4);
     line-height: var(--lh-2);
   }
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--sp-5);
+  }
 }
