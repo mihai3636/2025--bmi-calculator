@@ -109,6 +109,11 @@ body {
     padding-inline: var(--sp-5);
   }
 }
+@media (min-width: 68.75rem) {
+  .container {
+    padding-inline: 0;
+  }
+}
 
 .page {
   max-width: var(--container-width-1);
@@ -212,10 +217,25 @@ header.section:before {
   }
 }
 
-header .container {
+header .container > img {
+  margin-inline: auto;
+}
+@media (min-width: 68.75rem) {
+  header .container > img {
+    margin-inline: 0;
+  }
+}
+
+.header-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.header-wrapper > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.header-wrapper > * {
+  outline: 2px solid red;
 }
 
 .header-info {

@@ -26,9 +26,28 @@ header.section {
 }
 
 header .container {
+  & > img {
+    margin-inline: auto;
+
+    @media (min-width: $bp-desktop) {
+      margin-inline: 0;
+    }
+  }
+}
+
+.header-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  & > * {
+    // flex-basis: 100%;
+    // min-width: 0;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.header-wrapper > * {
+  outline: 2px solid red;
 }
 
 .header-info {

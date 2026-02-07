@@ -18,6 +18,9 @@ body {
   @media (min-width: $bp-tablet) {
     padding-inline: var(--sp-5);
   }
+  @media (min-width: $bp-desktop) {
+    padding-inline: 0;
+  }
 
   // background-color: pink;
 }

@@ -20,83 +20,86 @@
       <header class="section">
         <div class="container">
           <img src="./assets/images/logo.svg" alt="Logo" />
-          <div class="header-info content-flow">
-            <h1 class="title-page">Body Mass Index Calculator</h1>
-            <p>
-              Better understand your weight in relation to your height using our
-              body mass index (BM) calculator. While BMI is not the sole
-              determinant of a healthy weight, it offers a valuable starting
-              point to evaluate your overall health and well-being.
-            </p>
-          </div>
-          <div class="calculator">
-            <h2>Enter your details below</h2>
-            <!-- Metric radio picker -->
-            <label class="radio-group" for="radioMetric">
-              <div class="radio-custom">
-                <input
-                  id="radioMetric"
-                  type="radio"
-                  name="unit"
-                  value="metric"
-                />
-                <div class="checkmark"></div>
-              </div>
-              <span>Metric</span>
-            </label>
-
-            <label class="radio-group" for="radioImperial">
-              <div class="radio-custom">
-                <input
-                  id="radioImperial"
-                  type="radio"
-                  name="unit"
-                  value="imperial"
-                />
-                <div class="checkmark"></div>
-              </div>
-              <span>Imperial</span>
-            </label>
-
-            <div class="input-group content-flow">
-              <label for="inputHeightPrincipal">Height</label>
-              <div class="input-wrapper">
-                <input id="inputHeightPrincipal" type="text" />
-                <span>ft</span>
-              </div>
-            </div>
-
-            <div class="input-group input-group--secondary">
-              <div class="input-wrapper">
-                <input id="inputHeightSecondary" type="text" />
-                <span>in</span>
-              </div>
-            </div>
-
-            <div class="input-group content-flow">
-              <label for="inputWeightPrincipal">Weight</label>
-              <div class="input-wrapper">
-                <input id="inputWeightPrincipal" type="text" />
-                <span>st</span>
-              </div>
-            </div>
-
-            <div class="input-group input-group--secondary">
-              <div class="input-wrapper">
-                <input id="inputWeightSecondary" type="text" />
-                <span>lbs</span>
-              </div>
-            </div>
-
-            <div class="result result--welcomes split split--center">
-              <div class="result-header">
-                <h3 class="result-title">Your BMI is...</h3>
-                <p class="result-value">22.0</p>
-                <h3 class="result-welcome">Welcome!</h3>
-              </div>
-              <p class="result-info">
-                Enter your height and weight and you’ll see your BMI result here
+          <div class="header-wrapper">
+            <div class="header-info content-flow">
+              <h1 class="title-page">Body Mass Index Calculator</h1>
+              <p>
+                Better understand your weight in relation to your height using
+                our body mass index (BM) calculator. While BMI is not the sole
+                determinant of a healthy weight, it offers a valuable starting
+                point to evaluate your overall health and well-being.
               </p>
+            </div>
+            <div class="calculator">
+              <h2>Enter your details below</h2>
+              <!-- Metric radio picker -->
+              <label class="radio-group" for="radioMetric">
+                <div class="radio-custom">
+                  <input
+                    id="radioMetric"
+                    type="radio"
+                    name="unit"
+                    value="metric"
+                  />
+                  <div class="checkmark"></div>
+                </div>
+                <span>Metric</span>
+              </label>
+
+              <label class="radio-group" for="radioImperial">
+                <div class="radio-custom">
+                  <input
+                    id="radioImperial"
+                    type="radio"
+                    name="unit"
+                    value="imperial"
+                  />
+                  <div class="checkmark"></div>
+                </div>
+                <span>Imperial</span>
+              </label>
+
+              <div class="input-group content-flow">
+                <label for="inputHeightPrincipal">Height</label>
+                <div class="input-wrapper">
+                  <input id="inputHeightPrincipal" type="text" />
+                  <span>ft</span>
+                </div>
+              </div>
+
+              <div class="input-group input-group--secondary">
+                <div class="input-wrapper">
+                  <input id="inputHeightSecondary" type="text" />
+                  <span>in</span>
+                </div>
+              </div>
+
+              <div class="input-group content-flow">
+                <label for="inputWeightPrincipal">Weight</label>
+                <div class="input-wrapper">
+                  <input id="inputWeightPrincipal" type="text" />
+                  <span>st</span>
+                </div>
+              </div>
+
+              <div class="input-group input-group--secondary">
+                <div class="input-wrapper">
+                  <input id="inputWeightSecondary" type="text" />
+                  <span>lbs</span>
+                </div>
+              </div>
+
+              <div class="result result--welcomes split split--center">
+                <div class="result-header">
+                  <h3 class="result-title">Your BMI is...</h3>
+                  <p class="result-value">22.0</p>
+                  <h3 class="result-welcome">Welcome!</h3>
+                </div>
+                <p class="result-info">
+                  Enter your height and weight and you’ll see your BMI result
+                  here
+                </p>
+              </div>
             </div>
           </div>
         </div>
