@@ -4,8 +4,28 @@
 .explanation {
   display: grid;
   row-gap: var(--sp-5);
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    column-gap: var(--sp-3);
+  }
+
+  .container {
+    @media (min-width: $bp-tablet) {
+      padding-inline-start: 0;
+      padding-block: var(--sp-3);
+    }
+  }
+
+  img {
+    @media (min-width: $bp-tablet) {
+      transform: translateX(-10%);
+      object-fit: cover;
+    }
+  }
 }
 
-.explanation > *:nth-child(2) {
+.explanation .content-flow {
   --spacer: var(--sp-4);
 }

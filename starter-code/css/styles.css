@@ -393,8 +393,27 @@ header .container {
   display: grid;
   row-gap: var(--sp-5);
 }
+@media (min-width: 48rem) {
+  .explanation {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    column-gap: var(--sp-3);
+  }
+}
+@media (min-width: 48rem) {
+  .explanation .container {
+    padding-inline-start: 0;
+    padding-block: var(--sp-3);
+  }
+}
+@media (min-width: 48rem) {
+  .explanation img {
+    transform: translateX(-10%);
+    object-fit: cover;
+  }
+}
 
-.explanation > *:nth-child(2) {
+.explanation .content-flow {
   --spacer: var(--sp-4);
 }
 
