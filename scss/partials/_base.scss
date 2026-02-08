@@ -38,7 +38,12 @@ body {
 
   &.spacer-xl {
     padding-block: var(--sp-8);
+
+    @media (min-width: $bp-desktop) {
+      padding-block: var(--sp-10);
+    }
   }
+
   &.extra-margin {
     @media (min-width: $bp-tablet) {
       margin-block-start: var(--sp-6);
