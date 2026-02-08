@@ -14,8 +14,8 @@
   --clr-black: #000;
   --clr-grey-1: #acc1de;
   --clr-grey-2: #5e6e85;
-  --clr-gradient-start: rgb(214, 252, 254, 0.1);
-  --clr-gradient-end: rgb(214, 230, 254);
+  --clr-gradient-start: rgb(214, 252, 254, 0);
+  --clr-gradient-end: rgb(214, 230, 254, 1);
   --clr-gradient: linear-gradient(
     to right,
     var(--clr-gradient-start),
@@ -178,6 +178,7 @@ h3 {
 .title-page {
   font-size: var(--fs-6);
   line-height: var(--lh-1);
+  letter-spacing: -5%;
 }
 @media (min-width: 68.75rem) {
   .title-page {
@@ -205,15 +206,22 @@ header.section:before {
   position: absolute;
   inset: 0;
   bottom: var(--distance-to-bottom);
+  right: var(--distance-to-right, 0);
   border-radius: 0 0 var(--br) var(--br);
   background: var(--clr-gradient);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
   z-index: -1;
 }
 @media (min-width: 48rem) {
   header.section:before {
     --br: 0px;
     --distance-to-bottom: 40%;
+  }
+}
+@media (min-width: 68.75rem) {
+  header.section:before {
+    --distance-to-bottom: 17%;
+    --distance-to-right: 30%;
   }
 }
 
@@ -226,16 +234,13 @@ header .container > img {
   }
 }
 
-.header-wrapper {
-  display: flex;
-}
-.header-wrapper > * {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.header-wrapper > * {
-  outline: 2px solid red;
+@media (min-width: 68.75rem) {
+  .header-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: var(--sp-4);
+  }
 }
 
 .header-info {
@@ -245,6 +250,13 @@ header .container > img {
 @media (min-width: 48rem) {
   .header-info {
     padding-block: var(--sp-5);
+  }
+}
+@media (min-width: 68.75rem) {
+  .header-info {
+    padding-block: var(--sp-8);
+    padding-inline-end: var(--sp-10);
+    text-align: start;
   }
 }
 

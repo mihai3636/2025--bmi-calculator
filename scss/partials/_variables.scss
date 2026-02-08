@@ -28,8 +28,8 @@ $bp-tablet: #{toRem(768px)};
   --clr-grey-1: #acc1de;
   --clr-grey-2: #5e6e85;
 
-  --clr-gradient-start: rgb(214, 252, 254, 0.1);
-  --clr-gradient-end: rgb(214, 230, 254);
+  --clr-gradient-start: rgb(214, 252, 254, 0);
+  --clr-gradient-end: rgb(214, 230, 254, 1);
   --clr-gradient: linear-gradient(
     to right,
     var(--clr-gradient-start),
