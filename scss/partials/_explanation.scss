@@ -1,7 +1,7 @@
 @use "utils" as *;
 @use "variables" as *;
 
-.explanation {
+.explanation > .container {
   display: grid;
   row-gap: var(--sp-5);
 
@@ -9,19 +9,22 @@
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     column-gap: var(--sp-3);
+
+    padding-inline-start: 0;
+    align-items: center;
   }
 
-  .container {
-    @media (min-width: $bp-tablet) {
-      padding-inline-start: 0;
-      padding-block: var(--sp-3);
-    }
+  @media (min-width: $bp-desktop) {
+    column-gap: var(--sp-12);
   }
 
   img {
     @media (min-width: $bp-tablet) {
       transform: translateX(-10%);
-      object-fit: cover;
+    }
+
+    @media (min-width: $bp-desktop) {
+      transform: translateX(0);
     }
   }
 }

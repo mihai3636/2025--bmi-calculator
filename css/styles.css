@@ -109,7 +109,7 @@ body {
     padding-inline: var(--sp-5);
   }
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .container {
     padding-inline: 0;
   }
@@ -123,7 +123,7 @@ body {
 .section {
   padding-block: var(--sp-6);
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .section {
     padding-block: var(--sp-9);
   }
@@ -140,7 +140,7 @@ body {
 .content-flow {
   --spacer: var(--sp-3);
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .content-flow {
     --spacer: var(--sp-4);
   }
@@ -180,7 +180,7 @@ h3 {
   line-height: var(--lh-1);
   letter-spacing: -5%;
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .title-page {
     font-size: var(--fs-7);
   }
@@ -190,7 +190,7 @@ h3 {
   font-size: var(--fs-5);
   line-height: var(--lh-1);
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .title-section {
     font-size: var(--fs-6);
   }
@@ -218,7 +218,7 @@ header.section:before {
     --distance-to-bottom: 40%;
   }
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   header.section:before {
     --distance-to-bottom: 17%;
     --distance-to-right: 30%;
@@ -228,13 +228,13 @@ header.section:before {
 header .container > img {
   margin-inline: auto;
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   header .container > img {
     margin-inline: 0;
   }
 }
 
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .header-wrapper {
     display: grid;
     grid-auto-flow: column;
@@ -252,7 +252,7 @@ header .container > img {
     padding-block: var(--sp-5);
   }
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .header-info {
     padding-block: var(--sp-8);
     padding-inline-end: var(--sp-10);
@@ -416,7 +416,7 @@ header .container > img {
   font-weight: var(--fw-semi-bold);
   line-height: 1.1;
 }
-@media (min-width: 68.75rem) {
+@media (min-width: 75rem) {
   .result-value {
     font-size: var(--fs-7);
   }
@@ -426,27 +426,32 @@ header .container > img {
   font-size: var(--fs-1);
 }
 
-.explanation {
+.explanation > .container {
   display: grid;
   row-gap: var(--sp-5);
 }
 @media (min-width: 48rem) {
-  .explanation {
+  .explanation > .container {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     column-gap: var(--sp-3);
-  }
-}
-@media (min-width: 48rem) {
-  .explanation .container {
     padding-inline-start: 0;
-    padding-block: var(--sp-3);
+    align-items: center;
+  }
+}
+@media (min-width: 75rem) {
+  .explanation > .container {
+    column-gap: var(--sp-12);
   }
 }
 @media (min-width: 48rem) {
-  .explanation img {
+  .explanation > .container img {
     transform: translateX(-10%);
-    object-fit: cover;
+  }
+}
+@media (min-width: 75rem) {
+  .explanation > .container img {
+    transform: translateX(0);
   }
 }
 
