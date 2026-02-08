@@ -50,6 +50,14 @@
       .card:last-of-type {
         grid-column: span 4;
       }
+      &::after {
+        content: "";
+        grid-column: 3 / 4;
+        grid-row: 2;
+        background-image: url(../../assets/images/pattern-curved-line-right.svg);
+        background-repeat: no-repeat;
+        transform: scale(1.25);
+      }
     }
   }
 }

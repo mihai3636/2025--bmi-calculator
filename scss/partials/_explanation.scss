@@ -16,6 +16,19 @@
 
   @media (min-width: $bp-desktop) {
     column-gap: var(--sp-12);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 200px;
+      transform: translateY(-70%) translateX(-10%);
+      background-image: url(../../assets/images/pattern-curved-line-left.svg);
+      background-repeat: no-repeat;
+    }
   }
 
   img {
