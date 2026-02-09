@@ -92,8 +92,8 @@ header .container {
     font-size: var(--fs-4);
   }
 
-  .input-group--secondary {
-    // display: none;
+  &.metric .input-group--secondary {
+    display: none;
   }
 
   @media (min-width: $bp-tablet) {

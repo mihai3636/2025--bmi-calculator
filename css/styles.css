@@ -294,6 +294,9 @@ header .container > img {
 .calculator h2 {
   font-size: var(--fs-4);
 }
+.calculator.metric .input-group--secondary {
+  display: none;
+}
 @media (min-width: 48rem) {
   .calculator {
     padding: var(--sp-4);

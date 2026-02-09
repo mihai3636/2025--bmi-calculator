@@ -30,7 +30,7 @@
                 point to evaluate your overall health and well-being.
               </p>
             </div>
-            <div class="calculator">
+            <div class="calculator metric">
               <h2>Enter your details below</h2>
               <!-- Metric radio picker -->
               <label class="radio-group" for="radioMetric">
@@ -63,14 +63,14 @@
                 <label for="inputHeightPrincipal">Height</label>
                 <div class="input-wrapper">
                   <input id="inputHeightPrincipal" type="text" />
-                  <span>ft</span>
+                  <span id="heightMainUnit">ft</span>
                 </div>
               </div>
 
               <div class="input-group input-group--secondary">
                 <div class="input-wrapper">
                   <input id="inputHeightSecondary" type="text" />
-                  <span>in</span>
+                  <span id="heightSecondaryUnit">in</span>
                 </div>
               </div>
 
@@ -78,14 +78,14 @@
                 <label for="inputWeightPrincipal">Weight</label>
                 <div class="input-wrapper">
                   <input id="inputWeightPrincipal" type="text" />
-                  <span>st</span>
+                  <span id="weightMainUnit">st</span>
                 </div>
               </div>
 
               <div class="input-group input-group--secondary">
                 <div class="input-wrapper">
                   <input id="inputWeightSecondary" type="text" />
-                  <span>lbs</span>
+                  <span id="weightSecondaryUnit">lbs</span>
                 </div>
               </div>
 
@@ -237,3 +237,8 @@
     </main>
   </body>
 </html>
+
+<!-- - Underweight: BMI less than 18.5
+- Healthy weight: BMI 18.5 to 24.9
+- Overweight: BMI 25 to 29.9
+- Obese: BMI 30 or greater -->
