@@ -85,6 +85,14 @@ input[type=text] {
   font: inherit;
 }
 
+input,
+textarea,
+button,
+select,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -303,6 +311,7 @@ header .container > img {
   gap: var(--sp-2);
 }
 .radio-group input[type=radio] {
+  position: absolute;
   appearance: none;
   opacity: 0;
 }

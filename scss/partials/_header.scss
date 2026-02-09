@@ -112,6 +112,8 @@ header .container {
   gap: var(--sp-2);
 
   input[type="radio"] {
+    // Absolute positioning to work on safari
+    position: absolute;
     appearance: none;
     opacity: 0;
   }

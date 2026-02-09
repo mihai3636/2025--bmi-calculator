@@ -22,6 +22,14 @@ input[type="text"] {
   font: inherit;
 }
 
+input,
+textarea,
+button,
+select,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   max-width: 100%;
   display: block;
