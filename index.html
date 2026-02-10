@@ -62,7 +62,12 @@
               <div class="input-group content-flow">
                 <label for="inputHeightPrincipal">Height</label>
                 <div class="input-wrapper">
-                  <input id="inputHeightPrincipal" type="text" />
+                  <input
+                    id="inputHeightPrincipal"
+                    type="text"
+                    inputmode="decimal"
+                    pattern="[0-9]*\.?[0-9]+"
+                  />
                   <span id="heightMainUnit">ft</span>
                 </div>
               </div>

@@ -12,12 +12,11 @@ const heightSecondaryUnitEl = document.getElementById("heightSecondaryUnit");
 const weightMainUnitEl = document.getElementById("weightMainUnit");
 const weightSecondaryUnitEl = document.getElementById("weightSecondaryUnit");
 
-console.log(
-  heightMainUnitEl,
-  heightSecondaryUnitEl,
-  weightMainUnitEl,
-  weightSecondaryUnitEl,
-);
+const inputHeightPrincipalEl = document.getElementById("inputHeightPrincipal");
+const inputHeightSecondaryEl = document.getElementById("inputHeightSecondary");
+
+const inputWeightPrincipalEl = document.getElementById("inputWeightPrincipal");
+const inputWeightSecondaryEl = document.getElementById("inputWeightSecondary");
 
 let isMetric = false;
 let isImperial = true;
@@ -28,14 +27,27 @@ wrappers.forEach((wrapperEl) => {
     if (e.target === inputEl) return;
 
     inputEl.focus();
-    const length = inputEl.value.length;
-    inputEl.setSelectionRange(length, length);
   });
 });
 
 inputMetricEl.addEventListener("click", onMetricClicked);
 inputImperialEl.addEventListener("click", onImperialClicked);
 updateUi();
+
+inputHeightPrincipalEl.addEventListener("beforeinput", allowOnlyNumbers);
+inputHeightSecondaryEl.addEventListener("beforeinput", allowOnlyNumbers);
+
+inputWeightPrincipalEl.addEventListener("beforeinput", allowOnlyNumbers);
+inputWeightSecondaryEl.addEventListener("beforeinput", allowOnlyNumbers);
+
+function allowOnlyNumbers(e) {
+  if (e.data === null) return;
+
+  if (isNaN(e.target.value + e.data)) {
+    e.preventDefault();
+    return;
+  }
+}
 
 function updateUi() {
   if (isMetric) showMetric();
