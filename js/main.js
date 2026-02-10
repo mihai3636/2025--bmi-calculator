@@ -18,8 +18,19 @@ const inputHeightSecondaryEl = document.getElementById("inputHeightSecondary");
 const inputWeightPrincipalEl = document.getElementById("inputWeightPrincipal");
 const inputWeightSecondaryEl = document.getElementById("inputWeightSecondary");
 
-let isMetric = false;
-let isImperial = true;
+const resultValueEl = document.querySelector(".result-value");
+const resultInfoEl = document.querySelector(".result-info");
+
+let isMetric = true;
+let isImperial = false;
+
+let heightPrincipal = null;
+let heightSecondary = null;
+
+let weightPrincipal = null;
+let weightSecondary = null;
+
+let resultBmi = null;
 
 wrappers.forEach((wrapperEl) => {
   wrapperEl.addEventListener("click", (e) => {
@@ -40,6 +51,48 @@ inputHeightSecondaryEl.addEventListener("beforeinput", allowOnlyNumbers);
 inputWeightPrincipalEl.addEventListener("beforeinput", allowOnlyNumbers);
 inputWeightSecondaryEl.addEventListener("beforeinput", allowOnlyNumbers);
 
+inputHeightPrincipalEl.addEventListener("input", (ev) => {
+  if (inputHeightPrincipalEl.value === "") {
+    heightPrincipal = null;
+  } else {
+    heightPrincipal = inputHeightPrincipalEl.value;
+  }
+
+  updateUi();
+});
+
+inputHeightSecondaryEl.addEventListener("input", (ev) => {
+  if (inputHeightSecondaryEl.value === "") {
+    heightSecondary = null;
+  } else {
+    heightSecondary = inputHeightSecondaryEl.value;
+  }
+
+  updateUi();
+});
+
+inputWeightPrincipalEl.addEventListener("input", (ev) => {
+  let value = inputWeightPrincipalEl.value;
+  if (value === "") {
+    weightPrincipal = null;
+  } else {
+    weightPrincipal = inputWeightPrincipalEl.value;
+  }
+
+  updateUi();
+});
+
+inputWeightSecondaryEl.addEventListener("input", (ev) => {
+  let value = inputWeightSecondaryEl.value;
+  if (value === "") {
+    weightSecondary = null;
+  } else {
+    weightSecondary = inputWeightSecondaryEl.value;
+  }
+
+  updateUi();
+});
+
 function allowOnlyNumbers(e) {
   if (e.data === null) return;
 
@@ -52,6 +105,10 @@ function allowOnlyNumbers(e) {
 function updateUi() {
   if (isMetric) showMetric();
   if (isImperial) showImperial();
+
+  computeGeneralBmi();
+  updateInputs();
+  updateBmi();
 }
 
 function onMetricClicked() {
@@ -59,7 +116,6 @@ function onMetricClicked() {
   isImperial = false;
 
   updateUi();
-  console.log(`Metric clicked`);
 }
 
 function onImperialClicked() {
@@ -67,7 +123,6 @@ function onImperialClicked() {
   isMetric = false;
 
   updateUi();
-  console.log(`Imperial clicked`);
 }
 
 function showMetric() {
@@ -82,4 +137,72 @@ function showImperial() {
   inputImperialEl.checked = true;
   heightMainUnitEl.textContent = "ft";
   weightMainUnitEl.textContent = "st";
+}
+
+function updateInputs() {
+  inputHeightPrincipalEl.value = heightPrincipal ?? "";
+  inputHeightSecondaryEl.value = heightSecondary ?? "";
+
+  inputWeightPrincipalEl.value = weightPrincipal ?? "";
+  inputWeightSecondaryEl.value = weightSecondary ?? "";
+}
+
+function updateBmi() {
+  if (resultBmi === null) {
+    resultEl.classList.add("result--welcome");
+    return;
+  }
+
+  resultEl.classList.remove("result--welcome");
+  let resultValue = String(resultBmi.toFixed(1));
+  if (resultValue.length > 5) {
+    resultValue = "Huge";
+  }
+
+  resultValueEl.textContent = resultValue;
+
+  console.log(resultBmi);
+  let text;
+  if (resultBmi <= 18.5) {
+    text =
+      "Underweight: Below the healthy weight range. Consider a balanced diet to reach a healthier weight.";
+  } else if (resultBmi <= 24.9) {
+    text =
+      "Healthy weight: Within the recommended range. Maintain your current lifestyle for overall health.";
+  } else if (resultBmi <= 29.9) {
+    text =
+      "Overweight: Above the healthy weight range. A balanced diet and regular exercise may help manage your weight.";
+  } else {
+    text =
+      "Obese: Significantly above the healthy weight range. Consult a healthcare professional for guidance on achieving a healthier weight.";
+  }
+
+  resultInfoEl.textContent = text;
+}
+
+function computeGeneralBmi() {
+  if (Number(heightPrincipal) === 0) return;
+
+  if (isMetric) computeBmiMetric();
+  if (isImperial) computeBmiImperial();
+}
+
+function computeBmiMetric() {
+  resultBmi = computeBmi(Number(heightPrincipal), Number(weightPrincipal));
+}
+
+function computeBmiImperial() {
+  const weightInPounds = Number(weightPrincipal) * 14 + Number(weightSecondary);
+  const heightInInches = Number(heightPrincipal) * 12 + Number(heightSecondary);
+
+  const weightInKgs = weightInPounds * 0.45359237;
+  const heightInMeters = heightInInches * 0.0254;
+
+  resultBmi = computeBmi(heightInMeters, weightInKgs);
+}
+
+// height in meters
+// weight in kgs
+function computeBmi(height, weight) {
+  return weight / (height * height);
 }
