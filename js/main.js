@@ -1,5 +1,3 @@
-console.log("Hello world!");
-
 const wrappers = document.querySelectorAll(".input-wrapper");
 const inputMetricEl = document.getElementById("radioMetric");
 const inputImperialEl = document.getElementById("radioImperial");
@@ -55,7 +53,7 @@ inputHeightPrincipalEl.addEventListener("input", (ev) => {
   if (inputHeightPrincipalEl.value === "") {
     heightPrincipal = null;
   } else {
-    heightPrincipal = inputHeightPrincipalEl.value;
+    heightPrincipal = inputHeightPrincipalEl.value.replace(",", ".");
   }
 
   updateUi();
@@ -65,7 +63,7 @@ inputHeightSecondaryEl.addEventListener("input", (ev) => {
   if (inputHeightSecondaryEl.value === "") {
     heightSecondary = null;
   } else {
-    heightSecondary = inputHeightSecondaryEl.value;
+    heightSecondary = inputHeightSecondaryEl.value.replace(",", ".");
   }
 
   updateUi();
@@ -76,7 +74,7 @@ inputWeightPrincipalEl.addEventListener("input", (ev) => {
   if (value === "") {
     weightPrincipal = null;
   } else {
-    weightPrincipal = inputWeightPrincipalEl.value;
+    weightPrincipal = inputWeightPrincipalEl.value.replace(",", ".");
   }
 
   updateUi();
@@ -87,7 +85,7 @@ inputWeightSecondaryEl.addEventListener("input", (ev) => {
   if (value === "") {
     weightSecondary = null;
   } else {
-    weightSecondary = inputWeightSecondaryEl.value;
+    weightSecondary = inputWeightSecondaryEl.value.replace(",", ".");
   }
 
   updateUi();
@@ -96,7 +94,12 @@ inputWeightSecondaryEl.addEventListener("input", (ev) => {
 function allowOnlyNumbers(e) {
   if (e.data === null) return;
 
-  if (isNaN(e.target.value + e.data)) {
+  let key = e.data;
+  if (e.data === ",") {
+    key = ".";
+  }
+
+  if (isNaN(e.target.value + key)) {
     e.preventDefault();
     return;
   }
@@ -161,7 +164,6 @@ function updateBmi() {
 
   resultValueEl.textContent = resultValue;
 
-  console.log(resultBmi);
   let text;
   if (resultBmi <= 18.5) {
     text =
