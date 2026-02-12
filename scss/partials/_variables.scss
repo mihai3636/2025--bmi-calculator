@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -10,8 +10,6 @@
 }
 
 $bp-desktop: #{toRem(1200px)};
-// TODO: 375 is to small to consider tablet starting from here
-// look at the calculator info border radius for tablet for example.
 $bp-tablet: #{toRem(768px)};
 
 :root {

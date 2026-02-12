@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url("../../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -469,7 +469,7 @@ header .container > img {
     width: 100px;
     height: 200px;
     transform: translateY(-70%) translateX(-10%);
-    background-image: url(../../assets/images/pattern-curved-line-left.svg);
+    background-image: url(../assets/images/pattern-curved-line-left.svg);
     background-repeat: no-repeat;
   }
 }
@@ -571,7 +571,7 @@ header .container > img {
     content: "";
     grid-column: 3/4;
     grid-row: 2;
-    background-image: url(../../assets/images/pattern-curved-line-right.svg);
+    background-image: url(../assets/images/pattern-curved-line-right.svg);
     background-repeat: no-repeat;
     transform: scale(1.25);
   }
